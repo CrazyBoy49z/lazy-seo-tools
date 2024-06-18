@@ -2,6 +2,4 @@
 
 namespace Step2dev\LazySeo;
 
-class LazySeo
-{
-}
+class LazySeo {}
