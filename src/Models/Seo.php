@@ -17,8 +17,6 @@ class Seo extends Model
 
     protected $fillable = [
         'url',
-        'route_name'
+        'route_name',
     ];
-
-
 }
