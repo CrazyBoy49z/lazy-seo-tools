@@ -17,7 +17,7 @@ class SeoManager
 
     public function getSeo(Model $model)
     {
-        return $model->seo ?: new Seo();
+        return $model->seo ?: new Seo;
     }
 
     public function analyze(Seo $seo): array
@@ -33,6 +33,6 @@ class SeoManager
 
     public function getSeoForUrl(string $url): Seo
     {
-        return Seo::where('url', $url)->first() ?: new Seo();
+        return Seo::where('url', $url)->first() ?: new Seo;
     }
 }

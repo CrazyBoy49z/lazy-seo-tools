@@ -32,7 +32,7 @@ class Seo extends Model
         return $this->morphTo();
     }
 
-    public function scopeSearch(Builder $builder, string|null $search): Builder
+    public function scopeSearch(Builder $builder, ?string $search): Builder
     {
         return $builder->when($search, function (Builder $query, string $search) {
             $query->where(function (Builder $q) use ($search) {
@@ -43,5 +43,4 @@ class Seo extends Model
             });
         });
     }
-
 }
