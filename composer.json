@@ -1,6 +1,6 @@
 {
-    "name": "step2dev/lazy-seo",
-    "description": "This is my package lazy-seo",
+    "name": "step2dev/lazy-seotools",
+    "description": "Laravel SEO package with AI, Livewire, Blade and Redirects.",
     "keywords": [
         "Step2dev",
         "laravel",
@@ -13,9 +13,9 @@
             "name": "CrazyBoy49z",
             "email": "yura.finiv@gmail.com",
             "role": "Developer"
-        }
+    }
     ],
-    "require": {
+  "require": {
         "php": "^8.1",
         "illuminate/contracts": "^10.0",
         "spatie/laravel-package-tools": "^1.14.0",
@@ -66,7 +66,7 @@
             ],
             "aliases": {
                 "LazySeo": "Step2dev\\LazySeo\\Facades\\LazySeo"
-            }
+  }
         }
     },
     "minimum-stability": "dev",
