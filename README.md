@@ -38,6 +38,16 @@ php artisan vendor:publish --tag=lazy-seo-config
 php artisan vendor:publish --tag=lazy-seo-views
 ```
 
+## 🧪 Livewire компонент SEO Аналізу
+
+```blade
+<livewire:seo-analyzer-livewire 
+    :title="$model->seo_title" 
+    :description="$model->seo_description" 
+    :keywords="$model->seo_keywords" 
+    :content="$model->content"
+/>
+
 ## 🧠 Використання
 
 ### Blade
