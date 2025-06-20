@@ -8,6 +8,16 @@
 composer require step2dev/lazy-seotools
 ```
 
+# 🧠 Headless режим
+
+## Middleware
+
+```php
+protected $routeMiddleware = [
+    'headless' => \Step2dev\LazySeoTools\Http\Middleware\ForceHeadless::class,
+];
+```
+
 ## 🧬 Можливості
 
 - CRUD SEO для будь-якої моделі
@@ -49,6 +59,14 @@ Seo::renderMetaTags([
 ]);
 ```
 
+## Приклад використання
+
+```php
+Route::middleware(['headless'])->group(function () {
+    Route::get('/api/seo', [SeoApiController::class, 'index']);
+});
+```
+
 ## 🧪 Livewire
 
 Компоненти:
@@ -56,6 +74,7 @@ Seo::renderMetaTags([
 - `RedirectTable`
 
 ## 🗺 Міграції
+
 
 ```bash
 php artisan migrate
@@ -70,10 +89,42 @@ php artisan migrate
     \Step2dev\LazySeoTools\Http\Middleware\HandleSeoRedirects::class,
 ]
 ```
+## 🔔 Webhook Triggers
+
+Можна вказати URL у `.env`:
+
+```
+SEO_WEBHOOK_CREATED=https://your.site/webhooks/seo-created
+SEO_WEBHOOK_UPDATED=https://your.site/webhooks/seo-updated
+SEO_WEBHOOK_DELETED=https://your.site/webhooks/seo-deleted
+```
+
+І викликати:
+
+```php
+app(WebhookDispatcher::class)->trigger('seo.created', ['id' => 123]);
+```
 
 ## 📚 Документація
 
+## 🤖 AI SEO Generator
+
+
 🔜 В процесі...
+
+.env:
+
+```
+OPENAI_API_KEY=your-api-key
+```
+
+Використання:
+
+```php
+$content = 'Сторінка про Laravel SEO Tools';
+$meta = app(\Step2dev\LazySeoTools\Services\AISeoService::class)->generateMeta($content);
+```
+
 
 ## 🤝 Підтримка
 
@@ -83,4 +134,3 @@ php artisan migrate
 ## 🚀 Автор
 
 `step2dev` — створено з ❤️
-
