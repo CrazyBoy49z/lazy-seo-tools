@@ -3,7 +3,7 @@
 namespace Step2dev\LazySeoTools\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Step2dev\LazySeo\Services\SeoManager;
+use Step2dev\LazySeoTools\Services\SeoManager;
 
 class Seo extends Facade
 {

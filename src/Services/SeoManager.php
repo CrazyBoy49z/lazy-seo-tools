@@ -3,7 +3,7 @@
 namespace Step2dev\LazySeoTools\Services;
 
 use Illuminate\Database\Eloquent\Model;
-use Step2dev\LazySeo\Models\Seo;
+use Step2dev\LazySeoTools\Models\Seo;
 
 class SeoManager
 {

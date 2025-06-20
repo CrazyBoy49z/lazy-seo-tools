@@ -2,7 +2,7 @@
 
 namespace Step2dev\LazySeoTools\Services;
 
-use Step2dev\LazySeo\Models\Seo;
+use Step2dev\LazySeoTools\Models\Seo;
 
 class SeoAnalysisService
 {

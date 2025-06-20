@@ -4,7 +4,7 @@ namespace Step2dev\LazySeoTools;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Step2dev\LazySeo\Commands\LazySeoCommand;
+use Step2dev\LazySeoTools\Commands\LazySeoCommand;
 
 class LazySeoServiceProvider extends PackageServiceProvider
 {
