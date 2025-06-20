@@ -1,6 +1,6 @@
 <?php
 
-namespace Step2dev\LazySeo\Facades;
+namespace Step2dev\LazySeoTools\Facades;
 
 use Illuminate\Support\Facades\Facade;
 use Step2dev\LazySeo\Services\SeoManager;

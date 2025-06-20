@@ -1,6 +1,6 @@
 <?php
 
-namespace Step2dev\LazySeo\Tests;
+namespace Step2dev\LazySeoTools\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;

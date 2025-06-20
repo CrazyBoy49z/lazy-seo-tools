@@ -1,6 +1,6 @@
 <?php
 
-namespace Step2dev\LazySeo;
+namespace Step2dev\LazySeoTools;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

@@ -1,12 +1,12 @@
 {
-    "name": "step2dev/lazy-seotools",
+    "name": "step2dev/lazy-seo-tools",
     "description": "Laravel SEO package with AI, Livewire, Blade and Redirects.",
     "keywords": [
         "Step2dev",
         "laravel",
         "lazy-seo"
     ],
-    "homepage": "https://github.com/step2dev/lazy-seo",
+    "homepage": "https://github.com/step2dev/lazy-seo-tools",
     "license": "MIT",
     "authors": [
         {
@@ -37,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Step2dev\\LazySeo\\": "src/",
-            "Step2dev\\LazySeo\\Database\\Factories\\": "database/factories/"
+            "Step2dev\\LazySeoTools\\": "src/",
+            "Step2dev\\LazySeoTools\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Step2dev\\LazySeo\\Tests\\": "tests/"
+            "Step2dev\\LazySeoTools\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -64,10 +64,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Step2dev\\LazySeo\\LazySeoServiceProvider"
+                "Step2dev\\LazySeoTools\\LazySeoServiceProvider"
             ],
             "aliases": {
-                "LazySeo": "Step2dev\\LazySeo\\Facades\\LazySeo"
+                "LazySeo": "Step2dev\\LazySeoTools\\Facades\\LazySeo"
   }
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Step2dev\LazySeo\Models;
+namespace Step2dev\LazySeoTools\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;

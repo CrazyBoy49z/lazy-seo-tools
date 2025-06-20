@@ -1,5 +1,5 @@
 <?php
 
-namespace Step2dev\LazySeo;
+namespace Step2dev\LazySeoTools;
 
 class LazySeo {}

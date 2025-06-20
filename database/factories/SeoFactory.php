@@ -1,6 +1,6 @@
 <?php
 
-namespace Step2dev\LazySeo\Database\Factories;
+namespace Step2dev\LazySeoTools\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Step2dev\LazySeo\Models\Seo;

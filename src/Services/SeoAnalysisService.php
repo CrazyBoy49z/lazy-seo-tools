@@ -1,6 +1,6 @@
 <?php
 
-namespace Step2dev\LazySeo\Services;
+namespace Step2dev\LazySeoTools\Services;
 
 use Step2dev\LazySeo\Models\Seo;
 

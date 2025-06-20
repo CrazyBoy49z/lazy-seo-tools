@@ -1,6 +1,6 @@
 <?php
 
-namespace Step2dev\LazySeo\Commands;
+namespace Step2dev\LazySeoTools\Commands;
 
 use Illuminate\Console\Command;
 
