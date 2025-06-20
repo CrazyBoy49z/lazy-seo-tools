@@ -91,6 +91,22 @@ php artisan migrate
 ```
 ## 🔔 Webhook Triggers
 
+```php
+$analysis = app(\Step2dev\LazySeoTools\Services\SeoAnalyzerService::class)->analyze(
+    'Title Example',
+    'Description Example',
+    'example',
+    '<p>This is an example content with keyword: example</p>'
+);
+```
+
+Повертає:
+
+- score: 0–50
+- grade: red / orange / green
+- warnings: масив зауважень
+## 📊 SEO Аналізатор (Yoast-style)
+
 Можна вказати URL у `.env`:
 
 ```
