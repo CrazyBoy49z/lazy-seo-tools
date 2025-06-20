@@ -15,7 +15,7 @@ class SeoService
         );
     }
 
-    public function getSeo(Model $model)
+    public function getSeo(Model $model): Seo
     {
         return $model->seo ?: new Seo;
     }
