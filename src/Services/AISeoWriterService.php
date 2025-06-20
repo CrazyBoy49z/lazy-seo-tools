@@ -4,7 +4,7 @@ namespace Step2dev\LazySeoTools\Services;
 
 class AISeoWriterService
 {
-    public function generateMeta(string \$content): array
+    public function generateMeta(string $content): array
     {
         // Stub для генерації — тут буде інтеграція з OpenAI або іншим API
         return [
