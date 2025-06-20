@@ -4,7 +4,7 @@ namespace Step2dev\LazySeoTools\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SeoTemplate  extends Model
+class SeoTemplate extends Model
 {
     protected $fillable = [
         'url_pattern',
@@ -12,5 +12,4 @@ class SeoTemplate  extends Model
         'description',
         'keywords',
     ];
-
 }
