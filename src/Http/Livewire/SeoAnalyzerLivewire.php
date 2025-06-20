@@ -8,8 +8,11 @@ use Step2dev\LazySeoTools\Services\SeoAnalyzerService;
 class SeoAnalyzerLivewire extends Component
 {
     public string $title = '';
+
     public string $description = '';
+
     public string $keywords = '';
+
     public string $content = '';
 
     public array $result = [

@@ -2,9 +2,9 @@
 
 namespace Step2dev\LazySeoTools\Services;
 
-use Spatie\Sitemap\Tags\Url;
-use Spatie\Sitemap\Sitemap;
 use Illuminate\Support\Facades\Cache;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 class SitemapGeneratorService
 {

@@ -7,7 +7,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 class OGImageService
 {
-    public function generate(string $title, string $path = null): string
+    public function generate(string $title, ?string $path = null): string
     {
         $img = Image::canvas(1200, 630, '#f9fafb');
         $img->text($title, 100, 315, function ($font) {
@@ -18,9 +18,10 @@ class OGImageService
             $font->valign('center');
         });
 
-        $path ??= 'og/' . md5($title) . '.png';
+        $path ??= 'og/'.md5($title).'.png';
 
         Storage::disk('public')->put($path, (string) $img->encode('png'));
+
         return Storage::url($path);
     }
 }

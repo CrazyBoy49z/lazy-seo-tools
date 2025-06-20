@@ -5,7 +5,6 @@ namespace Step2dev\LazySeoTools\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Step2dev\LazySeoTools\Models\SeoRedirect;
-use Symfony\Component\HttpFoundation\Response;
 
 class HandleSeoRedirects
 {
