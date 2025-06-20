@@ -117,7 +117,33 @@ $analysis = app(\Step2dev\LazySeoTools\Services\SeoAnalyzerService::class)->anal
 - warnings: масив зауважень
 ## 📊 SEO Аналізатор (Yoast-style)
 
+
+## 🏷 OG Image Generator
+
+Використання:
+
+```php
+$url = app(\Step2dev\LazySeoTools\Services\OGImageService::class)
+    ->generate('Laravel SEO Tools');
+
+```php
+$analysis = app(\Step2dev\LazySeoTools\Services\SeoAnalyzerService::class)->analyze(
+    'Title Example',
+    'Description Example',
+    'example',
+    '<p>This is an example content with keyword: example</p>'
+);
+```
+
+Повертає:
+
+- score: 0–50
+- grade: red / orange / green
+- warnings: масив зауважень
+## 📊 SEO Аналізатор (Yoast-style)
+
 Можна вказати URL у `.env`:
+
 
 ```
 SEO_WEBHOOK_CREATED=https://your.site/webhooks/seo-created
@@ -133,10 +159,33 @@ app(WebhookDispatcher::class)->trigger('seo.created', ['id' => 123]);
 
 ## 📚 Документація
 
-## 🤖 AI SEO Generator
+
+echo '<meta property="og:image" content="' . $url . '" />';
+```
+
+> ⚠️ Потрібен шрифт у `resources/fonts/OpenSans-Bold.ttf`
+> Використовує Intervention Image та disk `public`
 
 
-🔜 В процесі...
+## 🔗 Canonical Checker
+
+```php
+$url = request()->fullUrl();
+$canonical = app(\Step2dev\LazySeoTools\Services\CanonicalService::class)
+    ->resolve($model->canonical_url, $url);
+
+$isDuplicate = app(\Step2dev\LazySeoTools\Services\CanonicalService::class)
+    ->isDuplicate($model->canonical_url, $url);
+```
+
+Вивід у Blade:
+
+```blade
+<link rel="canonical" href="{{ $canonical }}">
+@if ($isDuplicate)
+    <!-- Canonical differs from current URL -->
+@endif
+```
 
 .env:
 
@@ -144,13 +193,23 @@ app(WebhookDispatcher::class)->trigger('seo.created', ['id' => 123]);
 OPENAI_API_KEY=your-api-key
 ```
 
-Використання:
+
+
+
+
+
+## 🎯 CTR Predictor (AI)
 
 ```php
-$content = 'Сторінка про Laravel SEO Tools';
-$meta = app(\Step2dev\LazySeoTools\Services\AISeoService::class)->generateMeta($content);
+$result = app(\Step2dev\LazySeoTools\Services\CTRPredictorService::class)
+    ->predict('Найкращий Laravel SEO пакет', 'Цей пакет зробить ваше SEO ідеальним!');
+
+echo 'Очікуваний CTR: ' . $result['ctr'];
 ```
 
+
+
+> Використовує OpenAI GPT-3.5. Потрібен `OPENAI_API_KEY` у `.env`.
 
 ## 🤝 Підтримка
 
