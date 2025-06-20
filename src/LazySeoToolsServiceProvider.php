@@ -3,10 +3,9 @@
 namespace Step2dev\LazySeoTools;
 
 use Illuminate\Support\ServiceProvider;
-use Livewire\Livewire;
-use Step2dev\LazySeoTools\View\Components\TitleComponent;
 use Step2dev\LazySeoTools\View\Components\JsonLdComponent;
 use Step2dev\LazySeoTools\View\Components\OgComponent;
+use Step2dev\LazySeoTools\View\Components\TitleComponent;
 
 class LazySeoToolsServiceProvider extends ServiceProvider
 {

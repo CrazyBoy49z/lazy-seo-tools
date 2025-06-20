@@ -14,6 +14,6 @@ class JsonLdService
             'url' => $data['url'] ?? request()->fullUrl(),
         ];
 
-        return '<script type="application/ld+json">' . json_encode($json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
+        return '<script type="application/ld+json">'.json_encode($json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).'</script>';
     }
 }

@@ -2,9 +2,9 @@
 
 namespace Step2dev\LazySeoTools\Http\Controllers\Api;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Step2dev\LazySeoTools\Models\Seo;
-use Illuminate\Http\Request;
 
 class SeoApiController extends Controller
 {
@@ -27,6 +27,7 @@ class SeoApiController extends Controller
     {
         $seo = Seo::findOrFail($id);
         $seo->update($request->only(['title', 'description', 'keywords']));
+
         return $seo;
     }
 
@@ -34,6 +35,7 @@ class SeoApiController extends Controller
     {
         $seo = Seo::findOrFail($id);
         $seo->delete();
+
         return response()->json(['deleted' => true]);
     }
 }

@@ -7,7 +7,11 @@ use Step2dev\LazySeoTools\Models\Seo;
 
 class SeoForm extends Component
 {
-    public $title, $description, $keywords;
+    public $title;
+
+    public $description;
+
+    public $keywords;
 
     public function save()
     {

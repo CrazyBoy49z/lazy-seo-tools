@@ -13,7 +13,7 @@ class AISeoService
                 'model' => 'gpt-3.5-turbo',
                 'messages' => [
                     ['role' => 'system', 'content' => 'You are an SEO assistant.'],
-                    ['role' => 'user', 'content' => "Generate SEO title, description, keywords for: " . $content],
+                    ['role' => 'user', 'content' => 'Generate SEO title, description, keywords for: '.$content],
                 ],
             ]);
 
