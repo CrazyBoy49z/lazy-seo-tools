@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Spatie\Translatable\HasTranslations;
 
+/**
+ * @property int $id
+ */
 class Seo extends Model
 {
     use HasTranslations;

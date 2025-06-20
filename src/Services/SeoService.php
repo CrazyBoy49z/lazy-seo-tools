@@ -7,12 +7,17 @@ use Step2dev\LazySeoTools\Models\Seo;
 
 class SeoService
 {
-    public function createOrUpdateSeo(Model $model, array $seoData)
+    public function createOrUpdateSeo(Model $model, array $seoData): Seo
     {
-        return $model->seo()->updateOrCreate(
-            ['seoable_id' => $model->id, 'seoable_type' => get_class($model)],
+         $model->seo()->updateOrCreate(
+            [
+                'seoable_id' => $model->id,
+                'seoable_type' => get_class($model)
+            ],
             $seoData
         );
+
+        return $this->getSeo($model);
     }
 
     public function getSeo(Model $model): Seo
