@@ -3,11 +3,11 @@
 namespace Step2dev\LazySeo\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Step2dev\LazySeo\Models\Seo;
 
-/*
-class ModelFactory extends Factory
+class SeoFactory extends Factory
 {
-    protected $model = YourModel::class;
+    protected $model = Seo::class;
 
     public function definition()
     {
@@ -16,4 +16,3 @@ class ModelFactory extends Factory
         ];
     }
 }
-*/
