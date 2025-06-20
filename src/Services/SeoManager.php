@@ -2,24 +2,10 @@
 
 namespace Step2dev\LazySeoTools\Services;
 
-use Illuminate\Database\Eloquent\Model;
 use Step2dev\LazySeoTools\Models\Seo;
 
-class SeoManager
+class SeoManager extends SeoService
 {
-    public function createOrUpdateSeo(Model $model, array $seoData)
-    {
-        return $model->seo()->updateOrCreate(
-            ['seoable_id' => $model->id, 'seoable_type' => get_class($model)],
-            $seoData
-        );
-    }
-
-    public function getSeo(Model $model)
-    {
-        return $model->seo ?: new Seo;
-    }
-
     public function analyze(Seo $seo): array
     {
         $results = [];
